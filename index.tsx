@@ -102,10 +102,10 @@ const COLLABORATION_STEPS = [
 ];
 
 const FRIENDS = [
-  { name: "Andrea", role: "Creative Director", image: "https://picsum.photos/seed/friend1/200/200" },
-  { name: "Sofia", role: "Social Strategist", image: "https://picsum.photos/seed/friend2/200/200" },
-  { name: "Matteo", role: "Video Editor", image: "https://picsum.photos/seed/friend3/200/200" },
-  { name: "Giulia", role: "Web Designer", image: "https://picsum.photos/seed/friend4/200/200" },
+  { name: "Andrea", role: "Creative Director" },
+  { name: "Sofia", role: "Social Strategist" },
+  { name: "Matteo", role: "Video Editor" },
+  { name: "Giulia", role: "Web Designer" },
 ];
 
 const GIACOMO_CONTEXT = `
@@ -667,19 +667,6 @@ const App = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="text-center group"
               >
-                <div className="relative mb-6 inline-block">
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-electric-blue transition-all duration-500">
-                    <img 
-                      src={friend.image} 
-                      alt={friend.name} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 bg-white p-2 rounded-full shadow-md text-electric-blue opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Heart size={16} fill="currentColor" />
-                  </div>
-                </div>
                 <h4 className="text-xl font-black uppercase italic tracking-tighter">{friend.name}</h4>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">{friend.role}</p>
               </motion.div>
